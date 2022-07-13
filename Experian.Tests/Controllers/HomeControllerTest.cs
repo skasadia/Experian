@@ -119,10 +119,25 @@ namespace Experian.Tests.Controllers
         }
 
         [TestMethod]
+        public void AddDaysJan()
+        {
+            //Arrange 
+            CustomDate customDateTest = new CustomDate("01/01/2016", 60);
+
+            //Act
+            var Result = customDateTest.AddDays();
+
+            //Assert
+            Assert.AreEqual(Result, "01/03/2016");
+
+
+        }
+
+        [TestMethod]
         public void leadingZeroDay()
         {
             //Arrange 
-            CustomDate customDateTest = new CustomDate("14/12/2016", 10);
+            CustomDate customDateTest = new CustomDate("01/01/2016",60);
 
             //Act
             var Result = customDateTest.addLeadingZeroToDay(12);
