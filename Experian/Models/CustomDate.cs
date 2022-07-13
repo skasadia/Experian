@@ -52,7 +52,26 @@ namespace Experian.Models
             }
 
             if (currentMonth != 12)
+            {
                 _day++;
+
+                if (_day > GetNumberOfDays_InMonth(_month))
+                {
+                    _month++;
+                    _day = 1;
+
+                    if (_month > 12)
+                    {
+                        _month = 1;
+                        _year++;
+                        _day = 1;
+                    }
+                }
+                
+                   
+                
+            }
+                
 
 
 
