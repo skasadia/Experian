@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Add Days</h1>
+
+</div>
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+
+<div class="row">
+
+    <div class="form-group">
+
+        @if (ViewBag.NewDate == null)
+        {
+
+        <div class="col-md-10">
+            @Html.Label("Date", htmlAttributes: new { @class = "control-label col-md-2" })
+
+            @Html.TextBox("DateTxt", "", new { placeholder = "dd/MM/yyyy", @class = "form-input" })
+
+        </div>
+
+        <div class="col-md-10">
+            @Html.Label("Days To add", htmlAttributes: new { @class = "control-label col-md-2" })
+
+            @Html.TextBox("DayToaddTxt", "", new { @type = "number", @class = "form-input" })
+
+        </div>
+
+        <div class="col-md-10">
+            <input type="submit" value="Add" id="sub" class="btn btn-success" style=" margin-left: 18%; margin-top: 12px; ">
+        </div>
+
+        }
+        else {
+
+        <h2>  Added @ViewBag.Days days to  @ViewBag.oldDate new date is @ViewBag.NewDate  </h2>
+
+            
+        }
+    </div>
+
+
+    @*<div class="col-md-4">
+        <p>
+            @Html.TextBox("Date",)
+
+            <input type="submit" value="" id="sub" class="btn btn-success" />
+        </p>
+
+    </div>*@
+
+</div>
+
+}
