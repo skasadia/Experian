@@ -11,7 +11,7 @@ using Experian.Models;
 namespace Experian.Tests.Controllers
 {
     [TestClass]
-    public class HomeControllerTest
+    public class DateControllerTest
     {
         //[TestMethod]
         //public void Index()

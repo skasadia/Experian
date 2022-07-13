@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace Experian.Controllers
 {
-    public class HomeController : Controller
+    public class DateController : Controller
     {
         public ActionResult Index()
         {
